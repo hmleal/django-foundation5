@@ -2,3 +2,4 @@ include LICENSE
 include README.rst
 recursive-include foundation5/static *
 recursive-include foundation5/templates *
+recursive-include foundation5/templatetags *
