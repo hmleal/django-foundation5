@@ -1,0 +1,12 @@
+{% extends "foundation/field.html" %}
+
+{% block label %}
+<label>{{ field.label }}</label>
+{% endblock %}
+
+{% block content %}
+{% for choice in field.field.choices %}
+<input id="{{ field.id_for_label }}" type="checkbox"><label for="{{ field.id_for_label }}">{{ choice.1 }}</label>
+{% endfor %}
+
+{% endblock %}

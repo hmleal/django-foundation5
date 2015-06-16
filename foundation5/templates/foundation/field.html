@@ -1,0 +1,16 @@
+<div class="{% if field.field.required %}required{% endif %}{% if field.errors %} error{% endif %} {% block classes %}{% endblock %}">
+    {% block label %}{{ field.label_tag }}{% endblock %}
+    {% block content %}
+        {{ field }}
+        {% if field.help_text %}<p class="help">{{ field.help_text }}</p>{% endif %}
+    {% endblock %}
+    {% if field.errors %}<small class="error">{{ field.errors.as_text }}</small>{% endif %}
+</div>
+
+{% comment %}
+<div class="holder error">
+    <label for="id_full_input" class="required">Full width input<span class="asterisk">*</span></label>
+    <input name="full_input" type="text">
+    <small class="error">Este campo é obrigatório.</small>
+</div>
+{% endcomment %}

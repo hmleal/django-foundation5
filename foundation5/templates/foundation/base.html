@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="{% static "css/app.css" %}">
+    <script src="{% static "components/modernizr/modernizr.js" %}"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div id="container" class="large-12 columns">
+            {% for message in messages %}
+            <div data-alert class="alert-box {{ message.tags }}">{{ message }} <a class="close">&times;</a></div>
+            {% endfor %}
+
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    <script src="{% static "components/jquery/dist/jquery.min.js" %}"></script>
+    <script src="{% static "components/foundation/js/foundation.min.js" %}"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+</html>
