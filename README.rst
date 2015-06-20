@@ -10,12 +10,20 @@ Quick start
 
 1. Add "foundation5" to your INSTALLED_APPS setting like this::
 
+.. highlight:: python
+
+::
+
    INSTALLED_APPS = (
        ...
        'foundation5',
    )
 
 2. Include the foundation5 URLconf in your project urls.py like this::
+
+.. highlight:: python
+
+::
 
    url(r'^foundation/', include('foundation5.urls')),
 
